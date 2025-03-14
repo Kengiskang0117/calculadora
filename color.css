@@ -71,18 +71,11 @@ body {
 #Calculator > .operands {
     width: 100%;
     padding: 20px;
-    text-align: right;
     background-color: rgb(41, 216, 93);
     margin-bottom: 20px;
     border-radius: 5px;
-    font-size: 70px;
-    font-family: DS-DIGIT;
-
 }
 
-#Calculator > .operands > [ data-operand-1] {
-    font-size: 40px;
-}
 
 #Calculator > .btn-grid {
     display: grid;
@@ -125,7 +118,7 @@ h1 {
 }
 
 
-
+/*
 footer {
     position: fixed;
     bottom: 0;
@@ -135,3 +128,25 @@ footer {
     border-top-right-radius: 10px; 
     font-style: italic;
 }
+    */
+
+.result{
+    font-size: 40px;
+    font-family: DS-DIGIT;
+    padding-left: 80%;
+    opacity:  80%;
+}
+
+.numerals{
+    position: relative;
+    align-content: end !important;
+    display: flex;
+    background-color: #c9c9c9 !;
+    text-align: right;
+    font-size: 70px;
+    font-family: DS-DIGIT;
+    width: 20px !important;
+    padding-left: 80%;
+      
+}
+    

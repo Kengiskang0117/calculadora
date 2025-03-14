@@ -1,7 +1,8 @@
  export default class  Calculator {
-    constructor (operand1Element, operand2Element){
+    constructor (operand1Element, operand2Element,operand3Element){
         this.operand1Element = operand1Element;
         this.operand2Element = operand2Element;
+        this.operand3Element = operand3Element;
         this.clear();
 
     }
@@ -18,6 +19,7 @@
     updateUI(){
         this.operand1Element.innerHTML = this.operand1 + this.operator;
         this.operand2Element.innerHTML = this.operand2;
+    
 
     }
 
@@ -39,28 +41,49 @@
             this.Calc();
         }
         this.operator = operator;
-        this.operand1 = +this.operand2 === 0 ? this.operand1 : this.operand2;
+        this.operand1 = this.operand2 === 0 ? this.operand1 : this.operand2;
         this.operand2 = 0;
         this.updateUI();
     }
     Calc(){
+
+        console.log("operand1 despues", this.operand1);
+        console.log("operand2 despues", this.operand2);
+        console.log("operator", this.operator);
+
+        let num1 = parseFloat(this.operand1);
+        let num2 = parseFloat(this.operand2);
+        var operation = "";
+
+
         switch(this.operator){
             case "+":
-                var result = this.operand1 = +this.operand1 + +this.operand2;
-                return console.log(result)
-            break;
+                this.operand2 = num1 + num2;
+               operation= `${num1}+${num2}`;
+               
+                break;
             case "-":
-            this.operand1 = +this.operand1 - +this.operand2;
-            break;
-        case "*":
-            this.operand1 = +this.operand1 * +this.operand2;
-            break;
-        case "/":
-            this.operand1 = +this.operand1 / +this.operand2;
-            break;
+                this.operand2 = num1 - num2;
+                operation= `${num1}-${num2}`
+                break;
+            case "*":
+                this.operand2 = num1 * num2;
+                 operation= `${num1} * ${num2}`
+                break;
+            case "%":  
+                this.operand2 = num1 * num2 /100 ;
+                 operation= `${num1} % ${num2}`
+                break;
+            case "/":
+                this.operand2 = num1 / num2;
+                 operation= `${num1} / ${num2}`
+                break;
         }
-        this.operand1 = " ";
-        this.operand2 = 0;
+        this.operator= "";
+
+        this.operand3Element.innerHTML = operation;
+        this.operand1 = "";
+       
         this.updateUI();
     }
 }

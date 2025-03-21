@@ -81,6 +81,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
+    
+
 }
     
 #Calculator > .btn-grid > button {
@@ -91,7 +93,21 @@ body {
     border-width: 5px;
     border-color: #c9c9c9;
     font-size: 25px;  
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    
 }
+
+
+#Calculator > .btn-grid > button:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0,0, 0.5);
+    background-color: #9f9595;
+}
+
+
+
+
 
 #Calculator > .btn-grid > button:nth-child(2) {
     grid-column: span 2;
@@ -130,23 +146,22 @@ footer {
 }
     */
 
-.result{
-    font-size: 40px;
-    font-family: DS-DIGIT;
-    padding-left: 80%;
-    opacity:  80%;
-}
-
-.numerals{
+    .result {
+        font-size: 40px;
+        font-family: DS-DIGIT;
+        padding: 10px;
+        opacity: 70%;
+        text-align: right;
+        white-space: nowrap; /* Asegura una sola línea */
+        overflow-x: hidden; /* Recorta el texto que excede el ancho */
+    }
+.numerals {
     position: relative;
-    align-content: end !important;
-    display: flex;
-    background-color: #c9c9c9 !;
-    text-align: right;
+    text-align: right; /* Alineación a la derecha */
     font-size: 70px;
     font-family: DS-DIGIT;
-    width: 20px !important;
-    padding-left: 80%;
-      
+    width: 100% !important;
+    padding: 10px;
+    white-space: nowrap;
+    overflow-x: hidden; /* Oculta el texto que excede el ancho */
 }
-    

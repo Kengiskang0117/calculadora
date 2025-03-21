@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(205, 136, 45);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    background: rgb(0,212,255);
+background: linear-gradient(90deg, rgba(0,212,255,1) 39%, rgba(2,0,36,1) 40%, rgba(24,216,100,1) 40%);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+align-items: self-start;
+}
+
+#copy {
+    background-color: rgb(20, 117, 117);
+    font-size: 15px;
+    position: absolute;
+    left: 100px;
+}
+
+#calculator > .btn-grid {
+    display: flex;
+     align-items: center;
+     margin: 15px;
+}
+    
+
+
